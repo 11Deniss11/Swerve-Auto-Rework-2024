@@ -14,6 +14,7 @@ public class LimeLight {
     JsonNode node;
     Pose2d botposeRed = new Pose2d(0,0,new Rotation2d());
     Pose2d botposeBlue = new Pose2d(0,0,new Rotation2d());
+    Pose2d botpose = new Pose2d(0,0,new Rotation2d());
 
     public Pose2d runLimeLight(boolean isAllianceBlue) {
         final String json = table.getEntry("json").getString("{}");
@@ -30,6 +31,14 @@ public class LimeLight {
         else {
             return botposeRed;
         }
+    }
+
+    public Pose2d getPose() {
+        try {
+            node = new ObjectMapper().readTree(table.getEntry("json").getString("{}"));
+            botpose = new Pose2d(node.get("Results").get("botpose").get(0).asDouble(), node.get("Results").get("botpose").get(1).asDouble(), Rotation2d.fromDegrees(node.get("Results").get("botpose").get(5).asDouble()));
+        } catch (Exception e) {e.printStackTrace();};
+        return botpose;
     }
 
     public boolean seesTargets() {
