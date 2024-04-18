@@ -158,7 +158,7 @@ public class SwerveSubsystem extends SubsystemBase {
                 this::getPose, // Robot pose supplier
                 this::resetPose, // Method to reset odometry (will be called if your auto has a starting pose)
                 this::getRobotRelativeSpeeds, // ChassisSpeeds supplier. MUST BE ROBOT RELATIVE
-                this::setAutoChassisSpeed, // Method that will drive the robot given ROBOT RELATIVE ChassisSpeeds
+                this::driveRobotRelative, // Method that will drive the robot given ROBOT RELATIVE ChassisSpeeds
                 new HolonomicPathFollowerConfig( // HolonomicPathFollowerConfig, this should likely live in your Constants class
                         new PIDConstants(5.0, 0.0, 0.0), // Translation PID constants
                         new PIDConstants(5.0, 0.0, 0.0), // Rotation PID constants
@@ -254,7 +254,7 @@ public class SwerveSubsystem extends SubsystemBase {
         frontRight.resetEncoders();
     }
 
-    public void setAutoChassisSpeed(ChassisSpeeds speed) {
+    public void driveRobotRelative(ChassisSpeeds speed) {
         //ChassisSpeeds targetSpeeds = ChassisSpeeds.discretize(speed, 0.02); is this needed?
         SwerveModuleState states[] = DriveConstants.kDriveKinematics.toSwerveModuleStates(speed);
         setModuleStates(states);

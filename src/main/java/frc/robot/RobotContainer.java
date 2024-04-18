@@ -6,6 +6,8 @@ package frc.robot;
 
 import java.time.Instant;
 
+import com.pathplanner.lib.commands.PathPlannerAuto;
+
 import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.cscore.UsbCamera;
 import edu.wpi.first.math.geometry.Pose2d;
@@ -103,9 +105,7 @@ public class RobotContainer {
 
 
   public Command getAutonomousCommand() {
-    new Rotation2d();
-    
-    return new SequentialCommandGroup();
+    return new PathPlannerAuto("Example Auto");
   }
 }
 // Import WaitCommand for waiting
