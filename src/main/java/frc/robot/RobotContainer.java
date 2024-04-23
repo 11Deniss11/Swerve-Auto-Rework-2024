@@ -105,7 +105,7 @@ public class RobotContainer {
 
 
   public Command getAutonomousCommand() {
-    return new PathPlannerAuto("Example Auto");
+    return new PathPlannerAuto("New Auto");
   }
 }
 // Import WaitCommand for waiting

@@ -236,7 +236,7 @@ public class SwerveSubsystem extends SubsystemBase {
 
         visionPose = limeLight.getPose();
 
-        if (visionPose.getX() == 0 && visionPose.getY() == 0) {
+        if (visionPose.getX() != 0 && visionPose.getY() != 0) {
             m_poseEstimator.addVisionMeasurement(visionPose, Timer.getFPGATimestamp());
         }
 
