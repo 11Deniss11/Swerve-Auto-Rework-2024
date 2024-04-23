@@ -2,8 +2,8 @@
   "version": 1.0,
   "startingPose": {
     "position": {
-      "x": 1.7566125160740347,
-      "y": 6.232984317820488
+      "x": 1.359011265031077,
+      "y": 5.566417514601411
     },
     "rotation": 0.0
   },
@@ -14,7 +14,7 @@
         {
           "type": "path",
           "data": {
-            "pathName": "Example Path"
+            "pathName": "Shoot Note Path"
           }
         }
       ]
