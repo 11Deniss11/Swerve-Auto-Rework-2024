@@ -64,7 +64,7 @@ public class Constants {
 
         // Robot speeds
         public static final double kPhysicalMaxSpeedMetersPerSecond = 3.6; // PHYSICAL max speed of the modules (safety cap) 3.6
-        public static final double kTeleDriveMaxSpeedMetersPerSecond = 2.7; // Max speed set for teleop
+        public static final double kTeleDriveMaxSpeedMetersPerSecond = 1.5; // Max speed set for teleop
         public static final double kTeleBoostDriveMaxSpeedMetersPerSecond = 3.2; // Max speed set for boost teleop
         public static final double kTeleSlowDriveMaxSpeedMetersPerSecond = 1.25; // Max speed set for slow teleop
 
