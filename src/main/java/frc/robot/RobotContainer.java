@@ -43,10 +43,10 @@ import frc.robot.subsystems.ClimberSubsystem;
 public class RobotContainer {
 
   private final SwerveSubsystem swerveSubsystem = new SwerveSubsystem();
-  private final ShooterSubsystem shooterSubsystem = new ShooterSubsystem();
-  private final ClimberSubsystem climberSubsystem = new ClimberSubsystem();
-  private final LEDSubsystem ledSubsystem = new LEDSubsystem();
-  private final IntakeSubsystem intakeSubsystem = new IntakeSubsystem(ledSubsystem);
+  // private final ShooterSubsystem shooterSubsystem = new ShooterSubsystem();
+  // private final ClimberSubsystem climberSubsystem = new ClimberSubsystem();
+  // private final LEDSubsystem ledSubsystem = new LEDSubsystem();
+  // private final IntakeSubsystem intakeSubsystem = new IntakeSubsystem(ledSubsystem);
 
   private final Joystick driverJoystick = new Joystick(OIConstants.kOperatorControllerPort);
   private final Joystick translateStick = new Joystick(OIConstants.kDriverTranslateStickPort);
@@ -82,11 +82,11 @@ public class RobotContainer {
   private void configureBindings() {
     // BUTTONS
     new JoystickButton(driverJoystick, OIConstants.kDriverButtonId_resetGyro).onTrue(swerveSubsystem.zeroHeading());
-    new JoystickButton(driverJoystick, OIConstants.kDriverButtonId_climberUp).onTrue(new ToggleClimberCmd(climberSubsystem, true));
-    new JoystickButton(driverJoystick, OIConstants.kDriverButtonId_climberDown).onTrue(new ToggleClimberCmd(climberSubsystem, false));
-    new JoystickButton(driverJoystick, OIConstants.kDriverButtonId_toggleFlap).whileTrue(new ToggleFlapCmd(shooterSubsystem));
+    // new JoystickButton(driverJoystick, OIConstants.kDriverButtonId_climberUp).onTrue(new ToggleClimberCmd(climberSubsystem, true));
+    // new JoystickButton(driverJoystick, OIConstants.kDriverButtonId_climberDown).onTrue(new ToggleClimberCmd(climberSubsystem, false));
+    // new JoystickButton(driverJoystick, OIConstants.kDriverButtonId_toggleFlap).whileTrue(new ToggleFlapCmd(shooterSubsystem));
 
-    new JoystickButton(driverJoystick, OIConstants.kDriverButtonId_stop).onTrue(new EmergencyStopMechanismsCmd(shooterSubsystem, intakeSubsystem, climberSubsystem));
+    // new JoystickButton(driverJoystick, OIConstants.kDriverButtonId_stop).onTrue(new EmergencyStopMechanismsCmd(shooterSubsystem, intakeSubsystem, climberSubsystem));
 
 
     // // POV
@@ -95,10 +95,10 @@ public class RobotContainer {
 
 
     // TRIGGERS
-    new JoystickButton(driverJoystick, OIConstants.kDriverTriggerId_sourceIntake).whileTrue(new SourceIntakeCmd(shooterSubsystem, intakeSubsystem));
-    new JoystickButton(driverJoystick, OIConstants.kDriverTriggerId_toggleIntake).whileTrue(new ToggleArticulateCmd(intakeSubsystem));
-    new JoystickButton(driverJoystick, OIConstants.kDriverTriggerId_ampOut).whileTrue(new ShootAmpCmd(intakeSubsystem, ledSubsystem));
-    new JoystickButton(driverJoystick, OIConstants.kDriverTriggerId_shoot).whileTrue(new ShootCmd(shooterSubsystem, intakeSubsystem, ledSubsystem));
+    // new JoystickButton(driverJoystick, OIConstants.kDriverTriggerId_sourceIntake).whileTrue(new SourceIntakeCmd(shooterSubsystem, intakeSubsystem));
+    // new JoystickButton(driverJoystick, OIConstants.kDriverTriggerId_toggleIntake).whileTrue(new ToggleArticulateCmd(intakeSubsystem));
+    // new JoystickButton(driverJoystick, OIConstants.kDriverTriggerId_ampOut).whileTrue(new ShootAmpCmd(intakeSubsystem, ledSubsystem));
+    // new JoystickButton(driverJoystick, OIConstants.kDriverTriggerId_shoot).whileTrue(new ShootCmd(shooterSubsystem, intakeSubsystem, ledSubsystem));
   }
 
 

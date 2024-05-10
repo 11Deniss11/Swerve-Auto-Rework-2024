@@ -74,9 +74,9 @@ public class SwerveSubsystem extends SubsystemBase {
         DriveConstants.kModuleCANCoderReversed);
 
     public final AHRS gyro = new AHRS(SPI.Port.kMXP);
-    public final LimeLight limeLight = new LimeLight();
+    // public final LimeLight limeLight = new LimeLight();
     public Pose2d pose;
-    public Pose2d visionPose;
+    // public Pose2d visionPose;
     public boolean isAllianceBlue;
     public int tick = 0;
     public double[] headingBuffer = new double[10];
@@ -234,11 +234,11 @@ public class SwerveSubsystem extends SubsystemBase {
             frontRight.getPosition()
           });
 
-        visionPose = limeLight.getPose();
+        // visionPose = limeLight.getPose();
 
-        if (visionPose.getX() != 0 && visionPose.getY() != 0) {
-            m_poseEstimator.addVisionMeasurement(visionPose, Timer.getFPGATimestamp());
-        }
+        // if (visionPose.getX() != 0 && visionPose.getY() != 0) {
+        //     m_poseEstimator.addVisionMeasurement(visionPose, Timer.getFPGATimestamp());
+        // }
 
         sb_gyro.setDouble(getHeading() - 180);
         sb_voltage.setDouble(RobotController.getBatteryVoltage());
