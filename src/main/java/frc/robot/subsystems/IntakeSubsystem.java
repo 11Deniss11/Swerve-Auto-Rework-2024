@@ -14,7 +14,7 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants.IntakeConstants;
 
 import com.revrobotics.*;
-import com.revrobotics.Rev2mDistanceSensor.Port;
+// import com.revrobotics.Rev2mDistanceSensor.Port;
 
 public class IntakeSubsystem extends SubsystemBase {
 
@@ -25,7 +25,7 @@ public class IntakeSubsystem extends SubsystemBase {
     private final GenericEntry sb_encoder, sb_distance;
     private final LEDSubsystem ledSubsystem;
     
-    private final Rev2mDistanceSensor distanceSensor;
+    // private final Rev2mDistanceSensor distanceSensor;
 
     public String intakeState = "store";
     public boolean switchTemp = false;
@@ -53,8 +53,8 @@ public class IntakeSubsystem extends SubsystemBase {
 
         articulateEncoder.setPosition(0);
 
-        distanceSensor = new Rev2mDistanceSensor(Port.kMXP);
-        distanceSensor.setAutomaticMode(true);
+        // distanceSensor = new Rev2mDistanceSensor(Port.kMXP);
+        // distanceSensor.setAutomaticMode(true);
 
 
         sb_encoder = Shuffleboard.getTab("Driver")
@@ -136,7 +136,7 @@ public class IntakeSubsystem extends SubsystemBase {
     @Override
     public void periodic() {
         sb_encoder.setDouble(getPosition());
-        sb_distance.setDouble(distanceSensor.getRange());
+        // sb_distance.setDouble(distanceSensor.getRange());
 
         if (isDown()) {
             spinIn();
@@ -149,7 +149,7 @@ public class IntakeSubsystem extends SubsystemBase {
         }
 
         if (useDistanceSensor) {
-            noteConfirmed = (distanceSensor.getRange() < 10 && distanceSensor.getRange() > 0);
+            // noteConfirmed = (distanceSensor.getRange() < 10 && distanceSensor.getRange() > 0);
         } else {
             noteConfirmed = false;
         }
