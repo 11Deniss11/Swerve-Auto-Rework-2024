@@ -52,15 +52,15 @@ public class RobotContainer {
   private final Joystick translateStick = new Joystick(OIConstants.kDriverTranslateStickPort);
   private final Joystick rotateStick = new Joystick(OIConstants.kDriverRotateStickPort);
 
-  UsbCamera intakeCamera;
+  // UsbCamera intakeCamera;
 
   public RobotContainer() {
 
     swerveSubsystem.setDefaultCommand(new SwerveJoystickCmd(
       swerveSubsystem,
-      () -> -translateStick.getRawAxis(OIConstants.kDriverYAxis),
-      () -> -translateStick.getRawAxis(OIConstants.kDriverXAxis),
-      () -> rotateStick.getRawAxis(0),
+      () -> translateStick.getRawAxis(OIConstants.kDriverYAxis),
+      () -> translateStick.getRawAxis(OIConstants.kDriverXAxis),
+      () -> -rotateStick.getRawAxis(0),
       () -> translateStick.getRawButton(2),
       () -> translateStick.getRawButton(1), // Trigger
       () -> rotateStick.getRawButton(1))); // Trigger
@@ -74,7 +74,7 @@ public class RobotContainer {
     //             () -> driverJoystick.getRawButton(OIConstants.kDriverShootButtonId),
     //             () -> !driverJoystick.getRawButton(OIConstants.kDriverFieldOrientedButtonId)));
 
-    intakeCamera = CameraServer.startAutomaticCapture(0);
+    // intakeCamera = CameraServer.startAutomaticCapture(0);
                 
     configureBindings();
   }

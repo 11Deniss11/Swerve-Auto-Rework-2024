@@ -28,22 +28,22 @@ public class Constants {
                 new Translation2d(-kWheelBase / 2, kTrackWidth / 2));
 
         // DRIVE Motor Ports
-        public static final int kFrontLeftDriveMotorPort = 10;
-        public static final int kBackLeftDriveMotorPort = 3;
-        public static final int kFrontRightDriveMotorPort = 6;
-        public static final int kBackRightDriveMotorPort = 8;
+        public static final int kFrontLeftDriveMotorPort = 8;
+        public static final int kBackLeftDriveMotorPort = 6;
+        public static final int kFrontRightDriveMotorPort = 3;
+        public static final int kBackRightDriveMotorPort = 10;
 
         // TURNING Motor Ports
-        public static final int kFrontLeftTurningMotorPort = 2;
-        public static final int kBackLeftTurningMotorPort = 4;
-        public static final int kFrontRightTurningMotorPort = 5;
-        public static final int kBackRightTurningMotorPort = 7;
+        public static final int kFrontLeftTurningMotorPort = 7;
+        public static final int kBackLeftTurningMotorPort = 5;
+        public static final int kFrontRightTurningMotorPort = 4;
+        public static final int kBackRightTurningMotorPort = 2;
 
         // CANCoder Ids
-        public static final int kFrontLeftCANCoderId = 22;
-        public static final int kBackLeftCANCoderId = 24;
-        public static final int kFrontRightCANCoderId = 23;
-        public static final int kBackRightCANCoderId = 21;
+        public static final int kFrontLeftCANCoderId = 21;
+        public static final int kBackLeftCANCoderId = 23;
+        public static final int kFrontRightCANCoderId = 24;
+        public static final int kBackRightCANCoderId = 22;
 
         // Invert booleans | We use MK4i modules so the turning motors are inverted
         public static final boolean kModuleTurningEncoderReversed = true;
@@ -57,10 +57,10 @@ public class Constants {
         // public static final double kFrontRightDriveAbsoluteEncoderOffsetRad = 0.436332;
         // public static final double kBackRightDriveAbsoluteEncoderOffsetRad = 1.53589;
 
-        public static final double kFrontLeftDriveAbsoluteEncoderOffsetRad = -148 * Math.PI / 180;
-        public static final double kBackLeftDriveAbsoluteEncoderOffsetRad = 180 * Math.PI / 180;
-        public static final double kFrontRightDriveAbsoluteEncoderOffsetRad = 25 * Math.PI / 180;
-        public static final double kBackRightDriveAbsoluteEncoderOffsetRad = 88 * Math.PI / 180;
+        public static final double kFrontLeftDriveAbsoluteEncoderOffsetRad = 88 * Math.PI / 180;
+        public static final double kBackLeftDriveAbsoluteEncoderOffsetRad = 25 * Math.PI / 180;
+        public static final double kFrontRightDriveAbsoluteEncoderOffsetRad = 180 * Math.PI / 180;
+        public static final double kBackRightDriveAbsoluteEncoderOffsetRad = -148 * Math.PI / 180;
 
         // Robot speeds
         public static final double kPhysicalMaxSpeedMetersPerSecond = 3.6; // PHYSICAL max speed of the modules (safety cap) 3.6
